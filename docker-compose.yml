@@ -1,0 +1,18 @@
+
+version: '2'
+services:
+  serena:
+    build: .
+    container_name: serena
+    ports:
+    #- "22:22"
+    - "1055:1055"
+    volumes:
+    - /home/kraba/docker/docker-pvcs/data:/data
+    networks:
+      main:
+        aliases:
+          - serena
+    restart: always
+networks:
+  main:
