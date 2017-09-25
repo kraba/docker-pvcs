@@ -50,7 +50,11 @@ RUN chmod 500 /home/dmsys/remedyalive.sh
 RUN apt-get install -y openssh-server --no-install-recommends && \
     mkdir -p /var/run/sshd; \
     chmod 700 /var/run/sshd; \
-    echo "AllowUsers pvcs" >> /etc/ssh/sshd_config; 
+    echo "AllowUsers pvcs" >> /etc/ssh/sshd_config; \
+    mkdir -p /data/.ssh; \
+    chmod 700 /data/.ssh; \
+    ssh-keygen -q -t rsa -b 2048 -f /data/.ssh/id_dsa -N '' -C 'PVCS keypair generated during docker build' && cat /data/.ssh/id_dsa.pub > /pvcs/.ssh/authorized_keys; \
+    chmod 600 /data/.ssh/authorized_keys;
 
 #Useful package for working area
 RUN apt-get install -y zip unzip vim --no-install-recommends

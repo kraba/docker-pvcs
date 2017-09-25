@@ -13,7 +13,7 @@ I perform a fake installation of agent, I've make a tar file of the working inst
 The default path of installation is at /opt/serena/dimensions/14.3/ .
 I writed a perfect replica of necessary user/group and env/ports settings (for Linux).
 
-In our working environment the users log in via ssh and download from PVCS/Dimension server the software patches and build it before distributing & installing on production servers. The volume "data" is the rw filesystem where users can store the patches, access is granted by pvcs user (only this).
+In our working environment the users log in via ssh and download from PVCS/Dimension server the software patches and build it before distributing & installing it on production servers. The volume "data" is the rw filesystem where users can store the patches, access is granted by pvcs user (only this).
 
 ### Setup
 
@@ -26,7 +26,7 @@ docker exec -ti serena /bin/bash
 
 ### Acknowledgments
 
-It's a simple (...and maybe with some bugs) docker container...fell free to send me a mail with your opinions or modification!
+It's a simple (...and maybe with some bugs) docker container...feel free to send me a mail with your opinions or modification!
 
 ### License
 
