@@ -33,9 +33,13 @@ RUN dpkg --add-architecture i386 && \
 	apt-get install -y bc libocamlnet-ocaml-dev libsasl2-2 libc6:i386 libncurses5:i386 libstdc++6:i386 net-tools iproute2 --no-install-recommends
 
 #Serena/Remedy/PVCS Dimension "installation"
-COPY file/serena.tar.gz /opt
-RUN tar -zxf /opt/serena.tar.gz -C /opt && \
-	echo "pcms_sdp 1055/tcp" >> /etc/services 
+##############################################
+#PLEASE UNCOMMENT AND SELECT YOUR FILE SOURCE#
+##############################################
+#ARG SERENA_FILE=serena.tar.gz
+#COPY file/$SERENA_FILE /opt
+#RUN tar -zxf /opt/$SERENA_FILE -C /opt && \
+#	echo "pcms_sdp 1055/tcp" >> /etc/services 
 
 # Supervisord conf
 RUN apt-get install -y supervisor --no-install-recommends

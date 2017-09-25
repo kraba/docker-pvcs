@@ -5,7 +5,6 @@
 The idea & goal is to substitute a phisycal server, that run a single instance of Serena Dimension 14.3 agent, with a docker container.
 
 ### Disclaimer
-[Serena Dimension](https://www.microfocus.com/serena/?utm_medium=301&utm_source=serena.com/) is not a free software, we've licensed products and we can't - of course - distribute the installer or a full installation archive. 
 
 ### Few words about...
 
