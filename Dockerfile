@@ -57,7 +57,7 @@ RUN apt-get install -y openssh-server --no-install-recommends && \
     echo "AllowUsers pvcs" >> /etc/ssh/sshd_config; \
     mkdir -p /data/.ssh; \
     chmod 700 /data/.ssh; \
-    ssh-keygen -q -t rsa -b 2048 -f /data/.ssh/id_dsa -N '' -C 'PVCS keypair generated during docker build' && cat /data/.ssh/id_dsa.pub > /pvcs/.ssh/authorized_keys; \
+    ssh-keygen -q -t rsa -b 2048 -f /data/.ssh/id_dsa -N '' -C 'PVCS keypair generated during docker build' && cat /data/.ssh/id_dsa.pub > /data/.ssh/authorized_keys; \
     chmod 600 /data/.ssh/authorized_keys;
 
 #Useful package for working area
