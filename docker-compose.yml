@@ -8,6 +8,7 @@ services:
     #- "22:22"
     - "1055:1055"
     volumes:
+    # Modify the path
     - /home/kraba/docker/docker-pvcs/data:/data
     networks:
       main:
